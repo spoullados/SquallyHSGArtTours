@@ -26,7 +26,9 @@ To install all the dependencies required for the script provided to work, activa
 
 `pip install -r requirements.txt`
 
-You can now run the GettingStartedChat.py script by using:
+## Access keys to OpenAI and Azure Cognitive services
+
+By following the instructions in the manual mentioned previously, you can obtain access keys to OpenAI and Azure Cognitive Services. Input these into the appropriate variables in the GettingStartedChat.py script, and then you can run the same code using:
 
 `python GettingStartedChat.py`
 
