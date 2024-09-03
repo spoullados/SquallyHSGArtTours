@@ -4,7 +4,7 @@ Welcome to 9.006 RPV: Unlocking Potential: Realizing Social and Mobile Robots in
 
 This repository serves as a starting point for your projects; by following the instructions to come you will be able to have a conversation with the Navel Robot.
 
-Assuming you have set up you personal computer with all requirements outlined in the "Getting Started" manual (LINK), you need to first "fork" this repository. Every team member should then be included on the project repository, and the repository should be cloned to the robot. Please ensure the emails used to create your Github accounts are the same as the emails used to configure git on the robot.
+Assuming you have set up you personal computer with all requirements outlined in the "Getting Started" manual (LINK), you need to first "fork" this repository. Every team member should then be included on the project repository, and the repository should be cloned to the robot in a folder named "TEAM_X", where X is your team number (DIRECTORY WHERE THIS SHOULD BE DONE). Please ensure the usernames and emails used to create your Github accounts are the same as the usernames and emails used to configure git settings on the robot when each team member works on the local directory. This will allow git to track individual contributions.
 
 ## Virtual Environment
 
