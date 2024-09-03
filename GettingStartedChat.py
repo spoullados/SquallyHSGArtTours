@@ -74,7 +74,6 @@ def generate_response(openai_client: OpenAI, model: str, messages: list):
 if __name__ == "__main__":
     try:
         asyncio.run(chat())
-        print("hellowssss")
     except KeyboardInterrupt:
         pass
 
