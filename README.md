@@ -6,7 +6,7 @@ This repository serves as a starting point for your projects; by following the i
 
 Assuming you have set up you personal computer with all requirements outlined in the "Getting Started" manual (LINK), you need to first "fork" this repository. Every team member should then be included on the project repository, and the repository should be cloned to the robot. Please ensure the emails used to create your Github accounts are the same as the emails used to configure git on the robot.
 
-#Virtual Environment
+# Virtual Environment
 
 Once you have cloned your forked team repository, you must create a virtual environment within the same directory as the project. That can be achieved by running the following on the command line:
 
