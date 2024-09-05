@@ -4,7 +4,7 @@ from azure.cognitiveservices import speech
 from datetime import datetime
 import navel
 
-print("holiday")
+print("holi")
 
 #Example of a system prompt
 system_prompt = """You are Squally, a social robot located in the Square building at the University of Saint Gallen. You are friendly and like to interact with people and help people with their questions. Do not format the text in the answer. Reply with maximal 5 sentences."""
