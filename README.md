@@ -25,8 +25,32 @@ Host github.com-SURNAME_NAME <br />
 HostName github.com <br />
 IdentityFile ~/.ssh/SURNAME_NAME_id <br />
 
+Note: the command `nano config` should open the relevant file if in the correct directory, allowing for the changes to be made. Pressing Ctrl + O, followed by ENTER and then Ctrl + X should save and exit the file.
 
-and the repository should be cloned to the robot in a folder named "TEAM_X", where X is your team number (DIRECTORY WHERE THIS SHOULD BE DONE). 
+Now you need to add the authentication SSH key created to Github. The following instructions can be followed to achieve this:
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+With the SSH key generated, added to the config file and to your Github account, one team member can now clone the forked repository from Github to the robot machine. Create a folder/ directory in the robot called "TEAM_X", where X is your team number, and clone the repository using SSH. Instructions can be found here:
+
+https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+## Contribution signature
+
+Having created a local repository within your team folder, following the instruction to come will allow for changes committed and pushed by individual team members to be attributed to them specifically on GitHub.
+
+The following command will only have to executed once, immediately after the repository is cloned.
+
+`git remote remove origin`
+
+Each team member should the run:
+
+`git remote add SURNAME_NAME git@github.com-SURNAME_NAME:USERNAME/REPO.git`
+
+where USERNAME and REPO are the username of the person that forked the original repository and the name of the repository, respectively.
+
+To commit and push changes to the local and remote repositories respectively, 
+
 
 NOTEEEE: Please ensure the usernames and emails used to create your Github accounts are the same as the usernames and emails used to configure git settings on the robot when each team member works on the local directory. This will allow git to track individual contributions.
 
