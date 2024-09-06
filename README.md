@@ -14,16 +14,16 @@ Since all teams will be working on different projects on the same machine (the r
 
 Firstly, each team member should configure an SSH key on the robot and associate it with their GitHub account. This is achieved by executing the following commands in the terminal within the ~/.ssh directory:
 
-'ssh-keygen -f SURNAME_NAME_id'
+ `ssh-keygen -f SURNAME_NAME_id`
 
 you will then be prompted to create a passphrase. Since this folder will be shared amongst all course participants, create a passphrase that is strong in order to protect your private key.
 
 You should then add the following text to the "config" file within the same directory:
 
-'#SURNAME_NAME
+`#SURNAME_NAME
 Host github.com-SURNAME_NAME
 HostName github.com
-IdentityFile ~/.ssh/SURNAME_NAME_id'
+IdentityFile ~/.ssh/SURNAME_NAME_id`
 
 
 and the repository should be cloned to the robot in a folder named "TEAM_X", where X is your team number (DIRECTORY WHERE THIS SHOULD BE DONE). 
