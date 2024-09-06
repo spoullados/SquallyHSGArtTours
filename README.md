@@ -35,24 +35,57 @@ With the SSH key generated, added to the config file and to your Github account,
 
 https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-## Contribution signature
+## Contribution switch
 
-Having created a local repository within your team folder, following the instruction to come will allow for changes committed and pushed by individual team members to be attributed to them specifically on GitHub.
+Given the setup provided, before committing and pushing code to the local and remote repositories respectively, the user name and email are to be adjusted such that the contribution is associated with the correct GitHub account. To ease this process:
 
-The following command will only have to executed once, immediately after the repository is cloned.
+Immediately after the repository is cloned, run:
 
 `git remote remove origin`
 
-Each team member should the run:
+Each team member should then execute:
 
 `git remote add SURNAME_NAME git@github.com-SURNAME_NAME:USERNAME/REPO.git`
 
 where USERNAME and REPO are the username of the person that forked the original repository and the name of the repository, respectively.
 
-To commit and push changes to the local and remote repositories respectively, 
+Create a script named "git-switch-config.sh":
+
+`touch git-switch-config.sh`
+
+and occupy it with the following content:
+
+#!/bin/bash
+
+if [ "$1" == "SURNAME_NAME_1" ]; then
+    git config user.name "Personal Name of Team Member 1"
+    git config user.email "Team-Member-1-Github-Email@example.com"
+elif [ "$1" == "SURNAME_NAME_2" ]; then
+    git config user.name "Personal Name of Team Member 2"
+    git config user.email "Team-Member-2-Github-Email@example.com"
+else
+    echo "Usage: $0 {SURNAME_NAME_1|SURNAME_NAME_2}"
+    exit 1
+fi
+
+where more elif statements can be added for more team members. 
+
+Make the script executable by running:
+
+`chmod +x switch-git-config.sh`
 
 
-NOTEEEE: Please ensure the usernames and emails used to create your Github accounts are the same as the usernames and emails used to configure git settings on the robot when each team member works on the local directory. This will allow git to track individual contributions.
+To commit and push changes to the local and remote repositories respectively, run:
+
+`./switch-git-config.sh SURNAME_NAME`
+
+followed by:
+
+`git push SURNAME_NAME BRANCH_NAME`
+
+In order to further SSH-verify commits with a signature, the following instructions can be followed:
+
+https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
 
 ## Virtual Environment
 
