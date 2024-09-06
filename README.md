@@ -10,7 +10,7 @@ Once all team members (regardless whether their background is technical) have cr
 
 ## Cloning the repository
 
-Since all teams will be working on different projects on the same machine (the robot), certain procedures are to be followed to protect individual projects but also to allow all team members to contribute to their team's work. This section outlines a means of making this possible.
+Since all teams will be working on different projects on the same machine (the robot), certain procedures are to be followed to protect individual projects but also to allow all team members to contribute to their team's work. This section outlines a means of making this possible. It should be noted that there are many possible configurations to achieve the above objectives - what is to come is a method tested and recommended by the course leaders.
 
 Firstly, each team member should configure an SSH key on the robot and associate it with their GitHub account. This is achieved by executing the following commands in the terminal within the ~/.ssh directory:
 
