@@ -20,10 +20,10 @@ you will then be prompted to create a passphrase. Since this folder will be shar
 
 You should then add the following text to the "config" file within the same directory:
 
-`#SURNAME_NAME
-Host github.com-SURNAME_NAME
-HostName github.com
-IdentityFile ~/.ssh/SURNAME_NAME_id`
+`#SURNAME_NAME <br />
+Host github.com-SURNAME_NAME <br />
+HostName github.com <br />
+IdentityFile ~/.ssh/SURNAME_NAME_id` <br />
 
 
 and the repository should be cloned to the robot in a folder named "TEAM_X", where X is your team number (DIRECTORY WHERE THIS SHOULD BE DONE). 
