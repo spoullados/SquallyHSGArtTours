@@ -55,18 +55,18 @@ Create a script named "git-switch-config.sh":
 
 and occupy it with the following content:
 
-#!/bin/bash
-
-if [ "$1" == "SURNAME_NAME_1" ]; then
-    git config user.name "Personal Name of Team Member 1"
-    git config user.email "Team-Member-1-Github-Email@example.com"
-elif [ "$1" == "SURNAME_NAME_2" ]; then
-    git config user.name "Personal Name of Team Member 2"
-    git config user.email "Team-Member-2-Github-Email@example.com"
-else
-    echo "Usage: $0 {SURNAME_NAME_1|SURNAME_NAME_2}"
-    exit 1
-fi
+#!/bin/bash <br />
+<br />
+if [ "$1" == "SURNAME_NAME_1" ]; then <br />
+    git config user.name "Personal Name of Team Member 1" <br />
+    git config user.email "Team-Member-1-Github-Email@example.com" <br />
+elif [ "$1" == "SURNAME_NAME_2" ]; then <br />
+    git config user.name "Personal Name of Team Member 2" <br />
+    git config user.email "Team-Member-2-Github-Email@example.com" <br />
+else <br />
+    echo "Usage: $0 {SURNAME_NAME_1|SURNAME_NAME_2}" <br />
+    exit 1 <br />
+fi <br />
 
 where more elif statements can be added for more team members. 
 
