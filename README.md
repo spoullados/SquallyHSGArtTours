@@ -91,6 +91,24 @@ In order to further SSH-verify commits with a signature, the following instructi
 
 https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
 
+## Password protecting your work
+
+Since all team will be using the same machine for their projects, you might want to password protect your project folder after pushing changes to your remote repository. A suggestion for how you can do so is by zipping the folder.
+
+`zip -r --encrypt ZIPPED_FOLDER_NAME.zip FOLDER_TO_ZIP_NAME`
+
+This command will prompt you to enter a passphrase. Choose this carefully, and ensure all team members are aware of it. You will need this when unzipping the folder to commence with project work. You would then have to delete your unzipped/ unprotected folder via:
+
+`rm -rf FOLDER_TO_ZIP_NAME`
+
+To unzip the folder, use:
+
+`unzip ZIPPED_FOLDER_NAME.zip`
+
+This methodology allows for tracking of changes despite the deletion of the relevant local directory because the zipped folder containts the .git file which includes all details necessary to pick from where you left off once the folder is unzipped. Ensure you commit and push code prior to zipping. This will allow you to recover your work easily if you forget the password set above, or if you accidentally delete your local directory before zipping.
+
+As there are risks associated with this workflow if not followed as instructed, you are encouraged to look at eCryptfs as an alternative option to encrypt your work.
+
 ## Virtual Environment
 
 Once you have cloned your forked team repository, you must create a virtual environment within the same directory as the project. That can be achieved by running the following on the command line:
