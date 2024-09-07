@@ -2,7 +2,10 @@
 
 Welcome to 9.006 RPV: Unlocking Potential: Realizing Social and Mobile Robots in Action!
 
-Complemented by the course instruction manual, this repository serves as a starting point for your projects. Having installed Virtual Studio (VS) Code and Remote - SSH as an extension, as outlined in the installation manual, by following the instructions to come you will be able to have a conversation with the Navel Robot.
+Complemented by the course instruction manual, this repository serves as a starting point for your projects. Having:
+*installed Virtual Studio (VS) Code with Remote - SSH as an extension
+*obtained your OpenAI and Azure Speech Service keys
+as outlined in the installation manual, by following the instructions to come you will be able to have a conversation with the Navel Robot.
 
 ## Forking the repository
 
