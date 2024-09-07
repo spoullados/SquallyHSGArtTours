@@ -111,7 +111,7 @@ As there are risks associated with this workflow if not followed as instructed, 
 
 ## Virtual Environment
 
-Once you have cloned your forked team repository, you must create a virtual environment within the same directory as the project. That can be achieved by running the following on the command line:
+Once you have cloned your forked repository, you must create a virtual environment within the same directory as the project. That can be achieved by running the following on the command line:
 
 `python -m venv .venv`
 
@@ -131,7 +131,7 @@ To install all the dependencies required for the script provided to work, activa
 
 ## Access keys to OpenAI and Azure Cognitive services
 
-By following the instructions in the manual mentioned previously, you can obtain access keys to OpenAI and Azure Cognitive Services. Input these into the appropriate variables in the GettingStartedChat.py script, and then you can run the same code using:
+By following the instructions in the manual mentioned previously, you can obtain access keys to OpenAI and Azure Speech Services. Input these into the appropriate variables in the .env file, and then run the GettingStartedChat.py script using:
 
 `python GettingStartedChat.py`
 
