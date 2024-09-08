@@ -10,7 +10,9 @@ as outlined in the installation manual, by following the instructions to come yo
 
 ## Forking the repository
 
-Once all team members (regardless whether their background is technical) have created a GitHub account, one team member needs to "fork" this repository. Doing so will create a copy of this repository that is owned by the same team member. Ensure the forked repository is made "Private" such that other teams cannot view your work. Every team member should then be added as "collaborators" to the project repository.
+Once all team members (regardless whether their background is technical) have created a GitHub account, one team member needs to "fork" this repository. Doing so will create a copy of this repository that is owned by the same team member. Ensure the forked repository is made "Private" such that other teams cannot view your work. Every team member, in addition to the course leaders, should then be added as "collaborators" to the project repository.
+
+Since the repository will serve as a project portfolio, and can be edited via Github directly to reflect progress and milestones reached, all members of the team can contribute to it.
 
 ## Cloning the repository
 
