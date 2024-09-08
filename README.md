@@ -111,11 +111,13 @@ As there are risks associated with this workflow if not followed as instructed, 
 
 ## Virtual Environment
 
-Once you have cloned your forked repository, you must create a virtual environment within the same directory as the project. That can be achieved by running the following on the command line:
+Since various teams will be working on different python scripts which may have conflicting dependencies i.e. different versions of the same packages, it is important for each team to create a virtual environment consisting of an isolated set of installed packages.
+
+Once you have cloned your forked repository, you can create a virtual environment within the same directory as the project via:
 
 `python -m venv .venv`
 
-The virtual environment is used as a means of isolating Python package installations between different projects. The virutal environment created can be activated within the directory it is contained via:
+The virutal environment created can be activated within the directory it is contained via:
 
 `source .venv/bin/activate`
 
