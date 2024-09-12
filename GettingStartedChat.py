@@ -3,8 +3,12 @@ from openai import OpenAI
 from azure.cognitiveservices import speech
 from datetime import datetime
 import navel
+from dotenv import load_dotenv
+import os
 
-print("holida")
+load_dotenv()
+openai_key = os.getenv('OPENAI_KEY')
+speech_key = os.getenv('AZURE_KEY') 
 
 #Example of a system prompt
 system_prompt = """You are Squally, a social robot located in the Square building at the University of Saint Gallen. You are friendly and like to interact with people and help people with their questions. Do not format the text in the answer. Reply with maximal 5 sentences."""
@@ -25,10 +29,7 @@ def saveOpenAIOutput(output):
 
 async def chat():
     language = "en-US"
-    openai_key = "ENTER YOUR OPENAI KEY HERE"
     openai_model = "gpt-4o"
-
-    speech_key = "ENTER YOUR AZURE SPEECH SERVICE KEY HERE"
     speech_region = "eastus"
 
     openai_client = OpenAI(api_key=openai_key)
@@ -76,7 +77,6 @@ def generate_response(openai_client: OpenAI, model: str, messages: list):
 if __name__ == "__main__":
     try:
         asyncio.run(chat())
-        print("hello")
     except KeyboardInterrupt:
         pass
 
