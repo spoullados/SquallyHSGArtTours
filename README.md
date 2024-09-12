@@ -65,9 +65,22 @@ To install all the dependencies required for the script provided to work, activa
 
 ## Access keys to OpenAI and Azure Cognitive services
 
-By following the instructions in the manual mentioned previously, you can obtain access keys to OpenAI and Azure Speech Services. Input these into the appropriate variables in the .env file, and then run the GettingStartedChat.py script using:
+By following the instructions in the manual mentioned previously, you can obtain access keys to OpenAI and Azure Speech Services. 
+
+You should then create a .env file in your project directory via:
+
+`touch .env`
+
+and input the following within the folder:
+
+OPENAI_KEY = "ENTER YOUR OPENAI KEY HERE" <br /> 
+AZURE_KEY = "ENTER YOUR AZURE KEY HERE"
+
+where you need to replace the text with the access codes you created. You will then be able to run the GettingStartedChat.py script using:
 
 `python GettingStartedChat.py`
+
+Note: you may need to use "python3" instead of "python"
 
 Enjoy your chat with Squally and best of luck developing your solution for the course!
 
