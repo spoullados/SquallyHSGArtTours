@@ -41,7 +41,7 @@ You can then following the instructions in:
 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
-from point 2 onwards, in the "Adding a new SSH key to your account" section.
+from point 2 onwards, in the "Adding a new SSH key to your account" section. Ensure the key is of type "Authentication".
 
 With the SSH key generated, added to the config file and to your Github account, one team member can now clone the forked repository from Github to the robot machine. Create a folder/ directory in the "Student_Projects" directory called "TEAM_X", where X is your team number:
 
