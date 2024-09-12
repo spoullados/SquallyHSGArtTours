@@ -33,13 +33,31 @@ IdentityFile ~/.ssh/SURNAME_NAME_id <br />
 
 Note: the command `nano config` should open the relevant file if in the correct directory, allowing for the changes to be made. Pressing Ctrl + O, followed by ENTER and then Ctrl + X should save and exit the file.
 
-Now you need to add the authentication SSH key created to Github. The following instructions can be followed to achieve this:
+Now you need to add the authentication SSH key created to Github. To do so you first need to obtain your public key. This is possible by copying the output of the following command:
+
+`cat ~/.ssh/SURNAME_NAME_id.pub`
+
+You can then following the instructions in:
 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
-With the SSH key generated, added to the config file and to your Github account, one team member can now clone the forked repository from Github to the robot machine. Create a folder/ directory in the robot called "TEAM_X", where X is your team number, and clone the repository using SSH. Instructions can be found here:
+from point 2 onwards, in the "Adding a new SSH key to your account" section.
+
+With the SSH key generated, added to the config file and to your Github account, one team member can now clone the forked repository from Github to the robot machine. Create a folder/ directory in the "Student_Projects" directory called "TEAM_X", where X is your team number:
+
+`cd ~/Student_Projects`
+
+`mkdir Team_X`
+
+and then clone your repository in the directory created using the SSH method referred to in the "Cloning a repository" section provided in the following link:
 
 https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+Note, the person cloning the repository should ammend the command in point 6 in the following manner:
+
+`git clone https://github.com-SURNAME_NAME/YOUR-USERNAME/YOUR-REPOSITORY`
+
+i.e. by appending their SURNAME_NAME to github.com - as specified in the config file edited earlier. You should then provide your SSH key password.
 
 ## Virtual Environment
 
