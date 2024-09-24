@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 if [ "$1" == "JONAS_LAENZLINGER" ]; then
    git config user.name "JONAS_LAENZLINGER"
    git config user.email "laenzlinger.jonas@gmail.com"
