@@ -72,11 +72,18 @@ class HsgAIModule:
         return message
 
     def get_response(self, frame):
-        response = self.openai_client.chat.completions.create(
-            model=self.openai_model,
-            messages=self.messages,
-            additional_inputs={"frame": frame},
-        )
+        if frame:
+            response = self.openai_client.chat.completions.create(
+                model=self.openai_model,
+                messages=self.messages,
+                additional_inputs={"frame": frame},
+            )
+        else:
+            response = self.openai_client.chat.completions.create(
+                model=self.openai_model, 
+                messages=self.messages
+            )
+            
         message = {"role": "assistant", "content": response.choices[0].message.content}
         self.append_message(message)
         return message
