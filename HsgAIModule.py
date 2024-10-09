@@ -12,7 +12,7 @@ class HsgAIModule:
         self.openai_key = os.getenv("OPENAI_KEY")
         self.speech_key = os.getenv("AZURE_KEY")
         self.language = "en-US"
-        self.openai_model = "gpt-4o"
+        self.openai_model = "gpt-4-turbo-vision"
         self.speech_region = "eastus"
         self.openai_client = OpenAI(api_key=self.openai_key)
         self.audio_config = speech.audio.AudioConfig(device_name="default")
@@ -43,24 +43,24 @@ class HsgAIModule:
                         """,
         }
         self.append_message(system_prompt)
-        with open("messages.txt", 'r') as f:
-            lines = f.readlines()
-            for line in lines:
-                time_str, message_data = line.split("->")
-                role, message_content = message_data.split(";", 1)
-                role = role.strip()
-                message_content = message_content.strip()
-                self.append_message({"role": role, "content": message_content})
+        # with open("messages.txt", 'r') as f:
+        #     lines = f.readlines()
+        #     for line in lines:
+        #         time_str, message_data = line.split("->")
+        #         role, message_content = message_data.split(";", 1)
+        #         role = role.strip()
+        #         message_content = message_content.strip()
+        #         self.append_message({"role": role, "content": message_content})
 
     def append_message(self, message):
         self.messages.append(message)
-        self.save_to_file(message)
+        # self.save_to_file(message)
 
-    def save_to_file(self, message):
-        time_str = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        with open("messages.txt", "a") as f:
-            if message["role"] != "system":
-                f.write(f"{time_str} -> {message["role"]};{message["content"]}\n")
+    # def save_to_file(self, message):
+    #     time_str = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    #     with open("messages.txt", "a") as f:
+    #         if message["role"] != "system":
+    #             f.write(f"{time_str} -> {message["role"]};{message["content"]}\n")
 
 
     async def get_user_speech(self):
@@ -71,12 +71,12 @@ class HsgAIModule:
         self.append_message(message)
         return message
 
-    def get_response(self, frame):
+    def get_response(self, frame=False):
         if frame:
             response = self.openai_client.chat.completions.create(
                 model=self.openai_model,
                 messages=self.messages,
-                additional_inputs={"frame": frame},
+                files=[frame],
             )
         else:
             response = self.openai_client.chat.completions.create(
